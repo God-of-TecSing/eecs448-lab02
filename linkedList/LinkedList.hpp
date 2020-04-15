@@ -125,6 +125,21 @@ bool LinkedList<T>::removeBack()
 
 	if(m_size == 0)	{	}
 
+	else if(m_size == 1)
+	{
+
+		delete m_front;
+
+		m_front = nullptr;
+
+		isRemoved = true;
+
+		m_size = 0;
+
+		return isRemoved;
+
+	}
+
 	return(isRemoved);
 }
 
